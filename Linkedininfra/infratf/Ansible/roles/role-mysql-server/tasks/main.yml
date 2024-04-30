@@ -1,0 +1,7 @@
+---
+- name: Install_mysql_rhel.yml
+  include: install.yml
+
+- name: Config_mysql.yml
+  include: configure.yml
+...

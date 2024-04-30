@@ -1,0 +1,12 @@
+---
+- name: Instalando pacotes Mysql
+  yum:
+    name: "{{ mysql_packages }}"
+    state: present
+
+- name: Iniciando o Mysql
+  service:
+    name: mysqld
+    state: started
+    enabled: true
+...

@@ -1,0 +1,6 @@
+---
+- hosts: ec2-user
+  become: true
+  roles:
+    - role-mysql-server
+    - role-zabbix-server

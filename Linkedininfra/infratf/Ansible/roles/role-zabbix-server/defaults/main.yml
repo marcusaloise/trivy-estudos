@@ -1,0 +1,5 @@
+---
+# defaults file for role-zabbix-server
+DBname: zabbix
+DBuser: zabbix
+DBpassword: root
