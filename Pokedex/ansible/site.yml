@@ -1,0 +1,21 @@
+---
+
+- hosts: all
+  connection: local
+  gather_facts: False
+
+  tasks:
+    - name: Buscando informações do Pikachu e gravando em /tmp/Pokemon.csv
+      pokedex:
+        pokemon_name: 'pikachu'
+        csv_folder_path: /tmp/
+       
+
+    - name: Obtendo os 10 pokemon da API e gravando em /tmp/pokemon10Pokemon.csv
+      pokedex:
+        poke10: True
+        csv_folder_path: /tmp/pokemon10
+     
+
+
+

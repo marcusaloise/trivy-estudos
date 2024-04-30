@@ -1,0 +1,6 @@
+{
+    "ANSIBLE_MODULE_ARGS": {
+        "pokemon_name": "pikachu",
+        "csv_folder_path": "/tmp/"
+    }
+}

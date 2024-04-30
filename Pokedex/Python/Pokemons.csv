@@ -1,0 +1,11 @@
+Name,Ability,Type
+charmander ,blaze  solar-power ,fire
+charmeleon ,blaze  solar-power ,fire
+charizard ,blaze  solar-power ,fire  flying
+bulbasaur ,overgrow  chlorophyll ,grass  poison
+ivysaur ,overgrow  chlorophyll ,grass  poison
+venusaur ,overgrow  chlorophyll ,grass  poison
+caterpie ,shield-dust  run-away ,bug
+squirtle ,torrent  rain-dish ,water
+wartortle ,torrent  rain-dish ,water
+blastoise ,torrent  rain-dish ,water
