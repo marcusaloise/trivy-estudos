@@ -14,10 +14,12 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
       
-      - name: trivy-sbom
+      - name: trivy scaner
         uses: aquasecurity/trivy-action@master
         with:
           sacn-type: 'fs'
+          hide-progress: true
+          output: trivy.txt
           
       - name: Output 
         run: |
@@ -33,7 +35,7 @@ jobs:
               } >> $GITHUB_STEP_SUMMARY
                 fi
 
-      - name: Report to Pr
+      - name: Trivy Scan and Report to PR
         uses: domstolene/trivy-pr-report@v1
         with:
           github_token: ${{ github.token }}
