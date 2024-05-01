@@ -1,5 +1,5 @@
 {
-  "name": "lovebot",
+  "name": "lovebot-marcus",
   "version": "1.0.0",
   "description": "A Twitter bot that counts the days until I can see my GF",
   "main": "index.js",
