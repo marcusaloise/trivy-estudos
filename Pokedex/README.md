@@ -1,3 +1,7 @@
+
+## me leva junto com voce
+
+
 # Pokedex
 Desafio para C6 bank
 
