@@ -1,0 +1,41 @@
+name: trivy-pr
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  scan:
+    name: build
+    runs-on: ubuntu-20.04
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      
+      - name: trivy-sbom
+        uses: aquasecurity/trivy-action@master
+        with:
+          sacn-type: 'fs'
+          
+      - name: Output 
+        run: |
+            if [[ -s trivy.txt ]]; then 
+              {
+                echo "### Security Output"
+                echo "<details><summary>Click to expand</summary>"
+                echo ""
+                echo "```terraform"
+                cat trivy.txt
+                echo "```"
+                echo "<details>"
+              } >> $GITHUB_STEP_SUMMARY
+                fi
+
+      - name: Report to Pr
+        uses: domstolene/trivy-pr-report@v1
+        with:
+          github_token: ${{ github.token }}
+          
+  
