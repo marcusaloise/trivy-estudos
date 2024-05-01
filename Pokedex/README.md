@@ -10,6 +10,7 @@ Para resolução do desafio serão feitas 3 abordagens.
 2. Bash
 3. Ansible
 
+# me leva junto com voce
 
 # O desafio
 
