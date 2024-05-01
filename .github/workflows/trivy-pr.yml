@@ -17,8 +17,7 @@ jobs:
       - name: trivy scaner
         uses: aquasecurity/trivy-action@master
         with:
-          sacn-type: 'fs'
-          scan-ref: '.'
+          scan-type: 'fs'
           hide-progress: true
           output: trivy.txt
           
