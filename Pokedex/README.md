@@ -140,3 +140,11 @@ blastoise ,torrent  rain-dish ,water
 ```
 
 Obs: os arquivos serão armazenados em /tmp/
+
+
+
+# me leva junto com você
+
+
+
+
