@@ -1,0 +1,29 @@
+name: trivy-sbom
+on:
+  push:
+    branches:
+    - main
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    name: checkout-sbom
+    runs-on: ubuntu-20.04
+    steps:
+      - name: checkout-sbom
+        uses: actions/checkout@v3
+      
+      - name: trivy-sbom
+        uses: aquasecurity/trivy-actions@master
+        with:
+          sacn-type: 'fs'
+          format: 'github'
+          outputs: 'dependency-results.sbom.json'
+          scan-refs: '.'
+          github-pat: ${{secrets.GITHUB_TOKEN}}
+
+
+
+
+  
