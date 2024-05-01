@@ -1,0 +1,18 @@
+name: scan-01
+on:
+  push:
+    branches:
+    - main
+jobs:
+  scan:
+     name: scan-01
+     runs-on: ubuntu-20.04
+     steps:
+     - name: Checkout
+       uses: actions/checkout@v3
+
+     - name: Trivy-scan-01
+       uses: aquasecurity/trivy-action@master
+       with:
+         scan-type: 'fs'
+         scan-ref: '.'
